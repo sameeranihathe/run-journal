@@ -1,3 +1,25 @@
-<p>
-  activity-list works!
-</p>
+<div class="row row-runs">
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Comments</th>
+        <th>Date</th>
+        <th>Distance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activities">
+        <td>
+          
+            {{ activity.name }}
+          
+        </td>
+        <td>{{ activity.comments }}</td>
+        <td>{{ activity.date | date:"yyyy-MM-dd"}}</td>
+        <td>{{ activity.distance }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
